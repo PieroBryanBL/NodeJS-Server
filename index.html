@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        position: relative;
+        margin: 0;
+        padding: 5rem;
+        font-family: Impact, "Arial Narrow Bold", sans-serif;
+        overflow: hidden;
+        background-color: azure;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          height: 100vh;
+          width: 90%;
+          margin: auto;
+        }
+      }
+
+      .container-hero {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container-hero img {
+        width: fit-content;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      @media (min-width: 1080px) {
+        .container-hero img {
+          width: fit-content;
+          height: 200px;
+          border-radius: 10px;
+          object-fit: cover;
+        }
+      }
+
+      .title {
+        text-align: center;
+        width: 100%;
+        display: grid;
+        place-content: center;
+
+        margin: 10rem 0;
+        animation: slice-02 1s forwards ease-out;
+        opacity: 100;
+      }
+
+      @keyframes slice-02 {
+        from {
+          opacity: 0;
+        }
+      }
+
+      .date {
+        font-weight: bold;
+        animation: slice-01 1s forwards ease-out;
+      }
+
+      @keyframes slice-01 {
+        from {
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+      }
+
+      .date span {
+        font-size: 10px;
+      }
+      .decoration-01,
+      .decoration-02,
+      .decoration-03 {
+        z-index: -1111;
+      }
+
+      .decoration-01 {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        background-color: #0023445a;
+        filter: blur(1000px);
+        border-radius: 50%;
+        left: 180px;
+      }
+
+      .decoration-02 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        background-color: #0a15aa25;
+        filter: blur(1000px);
+        border-radius: 50%;
+        bottom: 50px;
+        right: -20px;
+      }
+    </style>
+    <title>NodeJS Server</title>
+  </head>
+  <body>
+    <div class="decoration-01"></div>
+    <div class="decoration-02"></div>
+    <div class="container">
+      <p class="date"><span>Created:</span> 01/08/2023</p>
+      <div class="container-hero">
+        <h1 class="title">
+          Opening a server with
+          <span style="text-decoration: underline">Node and Express</span>
+        </h1>
+
+        <img
+          src="https://images.unsplash.com/photo-1477346433521-912858ffd498?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+          alt="Unsplash Example Image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
